@@ -1,3 +1,13 @@
 <h1>State List</h1>
 
 <!-- iterate through each state in the array and put them into list items individually using the index of the array item as the list items ID -->
+
+<p class="note">
+  <i><%= @states_intro %></i>
+</p>
+
+<ul>
+  <% @states.each do | state | %>
+    <li id=@states.find_index(state)><%= state %></li>
+  <% end %>
+</ul>

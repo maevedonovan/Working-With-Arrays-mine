@@ -1,3 +1,13 @@
 <h1>Years</h1>
 
 <!-- use the erb outputs of <%= %> and call 'inspect' on your object -->
+
+<p class="note">
+  <i><%= @years_Alive %></i>
+</p>
+
+<ol>
+  <% @years.each do | year | %>
+    <li><%= year %></li>
+  <% end %>
+</ol>

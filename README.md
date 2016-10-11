@@ -43,7 +43,7 @@ Sinatra app to work with arrays
 	  # code!
 	  erb :states, layout: :main
 	end
-
+	
 5. Create an array of states called "states". Should include at least 5 you have visited in your life. The states should NOT be in alphabetical order.
 
 6. Use the appropriate array method to sort the states array alphabetically without permanently altering the array
