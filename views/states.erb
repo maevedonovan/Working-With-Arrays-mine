@@ -5,9 +5,30 @@
 <p class="note">
   <i><%= @states_intro %></i>
 </p>
+<!-- jarp:
+      you are missing the <%= %> output tags for the id value. Right now the code is what is being written to the page
+      Always check the html source in the browser to see what is getting written. Often that will uncover unintended code
+      Also remember to enclose html values for attributes in quotes
+-->
+
+<!-- the output was
 
 <ul>
+    <li id=@states.find_index(state)>California</li>
+    <li id=@states.find_index(state)>Colorado</li>
+    <li id=@states.find_index(state)>Indiana</li>
+    <li id=@states.find_index(state)>Maine</li>
+    <li id=@states.find_index(state)>Nevada</li>
+    <li id=@states.find_index(state)>Ohio</li>
+    <li id=@states.find_index(state)>South Dakota</li>
+    <li id=@states.find_index(state)>Tennessee</li>
+    <li id=@states.find_index(state)>Utah</li>
+    <li id=@states.find_index(state)>Washington</li>
+    <li id=@states.find_index(state)>Wyoming</li>
+</ul>
+-->
+<ul>
   <% @states.each do | state | %>
-    <li id=@states.find_index(state)><%= state %></li>
+    <li id="<%= @states.find_index(state) %>"><%= state %></li>
   <% end %>
 </ul>
